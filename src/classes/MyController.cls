@@ -22,4 +22,8 @@ public class MyController {
         delete vehicles;
         return null;
     }
+    
+    public void deleteVehicles(){
+    	delete vehicles;
+	}
 }
