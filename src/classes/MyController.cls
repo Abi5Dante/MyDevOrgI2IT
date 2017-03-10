@@ -24,6 +24,7 @@ public class MyController {
     }
     
     public void deleteVehicles(){
+        vehicles = [SELECT Name,License_Plate__c FROM Vehicle__c];
     	delete vehicles;
 	}
 }
