@@ -6,4 +6,8 @@ public class customExtension {
         buses = [SELECT id,name,route__c,type__c FROM bus__c];
     }
 
+	public bus__c getBuses(){
+		buses = [SELECT id,name,route__c,type__c FROM bus__c];
+		return buses;
+	}
 }
