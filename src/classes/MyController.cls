@@ -22,4 +22,10 @@ public class MyController {
         delete vehicles;
         return null;
     }
+    
+    public void updateVehicles(){
+    	vehicles = [SELECT Name,License_Plate__c FROM Vehicle__c];
+    	update vehicles;
+    }
+    
 }
