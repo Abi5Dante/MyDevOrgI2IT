@@ -1,0 +1,18 @@
+<apex:page standardController="Account" recordSetVar="accounts">
+    <apex:pageBlock title="Accounts List">
+        <apex:pageBlockTable value="{! accounts }" var="account">
+            <apex:column >
+                <apex:outputLink value="{! URLFOR($Action.Account.Edit, account.Id) }">
+                    Edit
+                </apex:outputLink>
+            </apex:column>
+            <apex:column >
+                <apex:outputLink value="{! URLFOR($Action.Account.View, account.Id) }">
+                    {! account.Name}
+                </apex:outputLink>
+            </apex:column>
+            <apex:column value="{! account.AnnualRevenue }"/>
+            <apex:column value="{! account.Owner.Name }"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
