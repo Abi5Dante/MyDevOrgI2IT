@@ -1,0 +1,17 @@
+<apex:page sidebar="false" controller="MyController" extensions="customExtension" tabStyle="Vehicle__c">
+    <apex:form >
+        <apex:pageBlock title="List of Vehicles">
+            <apex:pageBlockTable value="{! vehicles }" var="vehi">
+                <apex:column value="{!vehi.Name}" />
+                <apex:column value="{!vehi.License_Plate__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:pageBlock title="List of Buses">
+        <apex:pageBlockTable value="{!buses}" var="bus">
+            <apex:column value="{!bus.Name}"/>
+            <apex:column value="{!bus.Route__c}"/>
+            <apex:column value="{!bus.Type__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
