@@ -1,0 +1,24 @@
+<apex:page standardController="Account" extensions="extensionController" sidebar="false" >
+    <apex:form >
+        <apex:pageBlock title="Edit Account">
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:outputField value="{!Account.Owner.Name}"/>
+                <apex:inputField value="{!Account.AnnualRevenue}"/>0
+                <apex:inputField value="{!Account.Phone}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:pageBlock title="Contacts">
+        <apex:pageBlockTable value="{!conts}" var="con">
+            <apex:column value="{!con.Name}"/>
+            <apex:column value="{!con.Title}"/>
+            <apex:column value="{!con.Phone}"/>
+        </apex:pageBlockTable>
+	</apex:pageBlock>
+</apex:page>
